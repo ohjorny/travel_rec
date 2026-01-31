@@ -1,0 +1,105 @@
+body {
+    margin: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgb(67, 63, 59);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 30px;
+    transform: rotate(-45deg);
+}
+
+.logo-text {
+    color: rgb(245, 245, 245);
+}
+
+.center-btns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 35%;
+}
+
+.mid-btn {
+    background: none;
+    border: 0;
+    font-weight: bolder;
+    color: rgb(245,245,245);
+    font-size: larger;
+}
+
+.mid-btn:hover {
+    cursor: pointer;
+    color: rgb(155,155,155);
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+    background-color: rgb(245,245,245);
+    border-radius: 50px;
+    margin: 0;
+    padding: 5px;
+    height: 50px;
+}
+
+.form-search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.nav-search {
+    background: none;
+    border: none;
+    width: 60%;
+    height: 40px;
+    margin-left: 5px;
+    font-size: larger;
+}
+
+.nav-search:focus {
+    outline: none;
+}
+
+.nav-img {
+    width: 20px;
+}
+
+.nav-btn {
+    font-size: 18px;
+    color: rgb(245,245,245);
+    background-color: palevioletred;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 7px;
+}
+
+.nav-btn:hover {
+    background-color: rgb(241, 170, 193);
+    color: rgb(20, 11, 11);
+    cursor: pointer;
+}
