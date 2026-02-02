@@ -1,7 +1,7 @@
 body {
-    margin: 5px;
+    margin: 3px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: rgb(67, 63, 59);
+    background-image: url("./travel.jpg");
 }
 
 .navbar {
@@ -9,6 +9,10 @@ body {
     flex-direction: row; 
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(67, 63, 59);
+    opacity: 0.8;
+    position: sticky;
+    top: 0;
 }
 
 .logo {
@@ -48,6 +52,14 @@ body {
 
 .mid-btn:hover {
     cursor: pointer;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(245,245,245);
+}
+
+.nav-link:hover {
     color: rgb(155,155,155);
 }
 
@@ -102,4 +114,61 @@ body {
     background-color: rgb(241, 170, 193);
     color: rgb(20, 11, 11);
     cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    top: 50%;
+}
+
+.icon-img {
+    width: 30px;
+    padding: 10px;
+}
+
+.icon-img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 35%;
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    background-color: rgb(245,245,245);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.home-header {
+    font-weight: bolder;
+    font-size: 48px;
+    color: rgb(20, 11, 11);
+}
+
+.home-text {
+    font-size: 16px;
+    color: rgb(155,155,155);
+}
+
+.home-btn {
+    background-color: palevioletred;
+    color: rgb(245,245,245);
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 7px;
+}
+
+.home-btn:hover {
+    background-color: rgb(241, 170, 193);
+    cursor: pointer;
+    color: rgb(20, 11, 11);
 }
