@@ -2,6 +2,7 @@ body {
     margin: 3px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-image: url("./travel.jpg");
+    background-size: cover;
 }
 
 .navbar {
@@ -185,7 +186,49 @@ section {
     color: rgb(20, 11, 11);
 }
 
+#about {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 20px;
+}
 
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+
+.about-header {
+    font-size: 36px;
+    font-weight: bolder;
+    margin: 5px;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 70%;
+    color: rgb(245,245,245);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.team-text {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.members-container {
+    display: grid;
+    grid-template-columns: auto;
+}
 
 script {
     display: none;
