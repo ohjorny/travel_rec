@@ -180,7 +180,9 @@ function searchData() {
 function clearResults() {
     const resultsContainer = document.getElementById("results-container");
     resultsContainer.innerHTML = "";
-    queryInput.value = "";
+    const searchInput = document.getElementById("search-input");
+    searchInput.value = "";
+    searchInput.focus();
 }
 
 showMembers();
