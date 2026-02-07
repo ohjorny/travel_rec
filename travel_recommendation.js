@@ -143,7 +143,6 @@ function clearResults() {
     const resultsContainer = document.getElementById("results-container");
     resultsContainer.innerHTML = "";
     queryInput.value = "";
-    searchInput.value = "";
 }
 
 showMembers();
