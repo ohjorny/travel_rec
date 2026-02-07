@@ -109,6 +109,36 @@ function searchData() {
 
     data.then(jsonData => {
         const results = [];
+
+        const categoryKeywords = {
+            "beaches": ["beach", "beaches", "coast", "shore"],
+            "countries": ["country", "countries", "nation"],
+            "temples": ["temple", "temples", "shrine", "religious site"]
+        }
+
+        let matchedCategory = null;
+        for (const [cat, keyword] of Object.entries(categoryKeywords)) {
+            if (keyword.some(k => query.includes(k))) {
+                matchedCategory = cat;
+                break;
+            }
+        }
+
+        if (matchedCategory) {
+            const items = jsonData[matchedCategory];
+
+            if (matchedCategory === "countries") {
+                items.forEach(item => {
+                    item.cities.forEach(city => {
+                        results.push(city);
+                    });
+                });
+            }
+            else {
+                items.forEach(item => results.push(item));
+            }
+        }
+
         for (const category in jsonData) {
             const items = jsonData[category];
             if (category === "countries") {
@@ -124,6 +154,9 @@ function searchData() {
                     });
                 });
             }
+            else if (category === query) {
+                items.forEach(item => results.push(item));
+            }
             else {
                 items.forEach(item => {
                     if (item.name.toLowerCase().includes(query) ||
@@ -133,9 +166,14 @@ function searchData() {
                 });
             }
         }
+        const uniqueResults = results.filter((item, index) => {
+            return results.findIndex(i => i.name === item.name) === index;
+        })
+
+
         const container = document.getElementById("results-container");
         container.innerHTML = "";
-        displayResults(results);
+        displayResults(uniqueResults);
     }).catch(error => console.error("Error fetching data: ", error));
 }
 
